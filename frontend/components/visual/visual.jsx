@@ -11,7 +11,7 @@ class Visual extends React.Component{
 
   render(){
     return(
-      <h1>Test</h1>
+      <canvas ref="canvas" width={600} height={400}/>
     );
   }
 }
