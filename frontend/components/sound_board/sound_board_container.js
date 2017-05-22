@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import SoundBoard from './sound_board.jsx';
 
-const mapStateToProps = ({analyser}) => ({
-  analyser: analyser
+const mapStateToProps = ({analyser, audioCtx}) => ({
+  analyser: analyser,
+  audioCtx: audioCtx
 });
 
 const mapDispatchToProps = dispatch => ({

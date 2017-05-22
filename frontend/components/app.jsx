@@ -1,14 +1,16 @@
 import React from 'react';
 
 import VisualContainer from './visual/visual_container';
-import ControlPanel from './control_panel/control_panel';
+import SoundBoardContainer from './sound_board/sound_board_container';
+import TimerContainer from './timer/timer_container';
 
 const App = () => (
   <div className="app">
     <h2>Testing</h2>
 
     <VisualContainer />
-    <ControlPanel />
+    <SoundBoardContainer />
+    <TimerContainer />
 
   </div>
 );

@@ -20,7 +20,13 @@ class SoundBoard extends React.Component{
     ];
 
     const soundList = sounds.map(sound => (
-        <SoundBoardItem key={sound.id} src={sound.src} id={sound.id}/>
+        <SoundBoardItem
+          key={sound.id}
+          src={sound.src}
+          id={sound.id}
+          analyser={this.props.analyser}
+          audioCtx={this.props.audioCtx}
+          />
       )
     );
 

@@ -3,16 +3,18 @@ import React from 'react';
 class SoundBoardItem extends React.Component{
   constructor(props){
     super(props);
-    const audioComponent =   <audio
-        src={this.props.src}
-        ref={"track${this.props.id}"}
-        controls="true">
 
-      </audio>;
+    // <audio
+    //     src={this.props.src}
+    //     ref={"track${this.props.id}"}
+    //     controls='volume-slider'>
+    //
+    //   </audio>;
 
     this.state = {
-      audioComponent: audioComponent
+      // audioComponent: audioComponent
     };
+
 
     console.log(this.props);
   }
@@ -21,12 +23,15 @@ class SoundBoardItem extends React.Component{
   // button - play/pause toggle
 
   render(){
+    const audioComponent = document.getElementById('audio1');
+
     return(
-      <div className="sound_board_item">
-        {this.state.audioComponent}
-      </div>
+      <button onClick={e => audioComponent.play()}></button>
     );
   }
 }
+// <div className="sound_board_item">
+//   {this.state.audioComponent}
+// </div>
 
 export default SoundBoardItem;
