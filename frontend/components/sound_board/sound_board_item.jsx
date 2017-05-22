@@ -13,20 +13,30 @@ class SoundBoardItem extends React.Component{
 
     this.state = {
       // audioComponent: audioComponent
+      playing: false
     };
 
 
     console.log(this.props);
+    this.playToggle = this.playToggle.bind(this);
+  }
+
+  playToggle(){
+    const audioComponent = document.getElementById('audio1');
+
+    this.setState({
+      playing: !this.state.playing
+    },
+    () => this.state.playing ? audioComponent.play() : audioComponent.pause());
   }
 
   // volume slider
   // button - play/pause toggle
 
   render(){
-    const audioComponent = document.getElementById('audio1');
 
     return(
-      <button onClick={e => audioComponent.play()}></button>
+      <button onClick={e => this.playToggle()}></button>
     );
   }
 }
