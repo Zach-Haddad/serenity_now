@@ -15,15 +15,15 @@ class SoundBoard extends React.Component{
 
   render(){
     const sounds = [
-      {id: 1, src: './assets/tracks/white-noise.mp3'},
+      {id: 1, name: 'White Noise'},
       {id: 2, src: './assets/tracks/white-noise.mp3'}
     ];
 
     const soundList = sounds.map(sound => (
         <SoundBoardItem
           key={sound.id}
-          src={sound.src}
           id={sound.id}
+          name={sound.name}
           analyser={this.props.analyser}
           audioCtx={this.props.audioCtx}
           />

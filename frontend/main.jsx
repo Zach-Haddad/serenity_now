@@ -7,6 +7,10 @@ const addAudio = function(path, idx){
 
 };
 
+const paths = [
+
+];
+
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   const root = document.getElementById('root');

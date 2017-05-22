@@ -13,7 +13,8 @@ class SoundBoardItem extends React.Component{
   }
 
   playToggle(){
-    const audioComponent = document.getElementById('audio1');
+    const target = 'audio' + this.props.id;
+    const audioComponent = document.getElementById(target);
 
     this.setState({
       playing: !this.state.playing
@@ -29,15 +30,15 @@ class SoundBoardItem extends React.Component{
 
   render(){
     // toggle button style on play/pause
-
+    console.log(this.props);
     return(
       <div className="sound_board_item">
-        <button onClick={e => this.playToggle()}></button>
+        <button onClick={e => this.playToggle()}>{this.props.name}</button>
         <input
           type="range"
           min="0"
           max="1"
-          step="0.1"
+          step="0.01"
           onChange={e => this.setVolume(e)}/>
       </div>
 
