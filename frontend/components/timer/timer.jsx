@@ -6,13 +6,28 @@ class Timer extends React.Component{
 
     this.state = {
       mins: "00",
-      secs: "00"
+      secs: "00",
+      timerStarted: false
     };
   }
 
   startTimer(){
 
   }
+
+  increment(){
+
+  }
+
+  decrement(){
+
+  }
+
+  //  preview:
+  //  ^ ^   ^ ^
+  //  0 0 : 0 0
+  //  V V   V V
+  //   Start/Stop Toggle
 
   render(){
     return(
