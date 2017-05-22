@@ -9,7 +9,7 @@ import merge from 'lodash/merge';
 
 const _defaultState = {
   currentTracks: []
-}
+};
 
 const rootReducer = (state = {}, action) => {
   Object.freeze(state);

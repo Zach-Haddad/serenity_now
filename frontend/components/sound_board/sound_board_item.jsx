@@ -6,11 +6,19 @@ class SoundBoardItem extends React.Component{
     this.state = {
 
     };
+    // create audio
   }
 
-  render(){
+  // volume slider
+  // button - play/pause toggle
+
+  render({src}){
     return(
-      <h3>Still testing</h3>
+      <div className="sound_board_item">
+        <audio>
+
+        </audio>
+      </div>
     );
   }
 }
