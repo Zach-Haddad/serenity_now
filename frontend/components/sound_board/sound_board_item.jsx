@@ -11,6 +11,7 @@ class SoundBoardItem extends React.Component{
     //
     //   </audio>;
 
+
     this.state = {
       // audioComponent: audioComponent
       playing: false
@@ -19,6 +20,7 @@ class SoundBoardItem extends React.Component{
 
     console.log(this.props);
     this.playToggle = this.playToggle.bind(this);
+    this.setVolume = this.setVolume.bind(this);
   }
 
   playToggle(){
@@ -26,8 +28,15 @@ class SoundBoardItem extends React.Component{
 
     this.setState({
       playing: !this.state.playing
-    },
-    () => this.state.playing ? audioComponent.play() : audioComponent.pause());
+    }, () =>
+      this.state.playing ? audioComponent.play() : audioComponent.pause()
+    );
+  }
+
+  setVolume(e){
+    const audioComponent = document.getElementById('audio1');
+
+    audioComponent.volume = e.target.value;
   }
 
   // volume slider
@@ -36,7 +45,16 @@ class SoundBoardItem extends React.Component{
   render(){
 
     return(
-      <button onClick={e => this.playToggle()}></button>
+      <div className="sound_board_item">
+        <button onClick={e => this.playToggle()}></button>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.1"
+          onChange={e => this.setVolume(e)}/>
+      </div>
+
     );
   }
 }
