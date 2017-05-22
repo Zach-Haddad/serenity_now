@@ -4,21 +4,10 @@ class SoundBoardItem extends React.Component{
   constructor(props){
     super(props);
 
-    // <audio
-    //     src={this.props.src}
-    //     ref={"track${this.props.id}"}
-    //     controls='volume-slider'>
-    //
-    //   </audio>;
-
-
     this.state = {
-      // audioComponent: audioComponent
       playing: false
     };
 
-
-    console.log(this.props);
     this.playToggle = this.playToggle.bind(this);
     this.setVolume = this.setVolume.bind(this);
   }
@@ -35,14 +24,11 @@ class SoundBoardItem extends React.Component{
 
   setVolume(e){
     const audioComponent = document.getElementById('audio1');
-
     audioComponent.volume = e.target.value;
   }
 
-  // volume slider
-  // button - play/pause toggle
-
   render(){
+    // toggle button style on play/pause
 
     return(
       <div className="sound_board_item">
@@ -58,8 +44,6 @@ class SoundBoardItem extends React.Component{
     );
   }
 }
-// <div className="sound_board_item">
-//   {this.state.audioComponent}
-// </div>
+
 
 export default SoundBoardItem;
