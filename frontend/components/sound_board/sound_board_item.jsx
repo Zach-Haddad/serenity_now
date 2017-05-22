@@ -3,21 +3,27 @@ import React from 'react';
 class SoundBoardItem extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
+    const audioComponent =   <audio
+        src={this.props.src}
+        ref={"track${this.props.id}"}
+        controls="true">
 
+      </audio>;
+
+    this.state = {
+      audioComponent: audioComponent
     };
-    // create audio
+
+    console.log(this.props);
   }
 
   // volume slider
   // button - play/pause toggle
 
-  render({src}){
+  render(){
     return(
       <div className="sound_board_item">
-        <audio>
-
-        </audio>
+        {this.state.audioComponent}
       </div>
     );
   }

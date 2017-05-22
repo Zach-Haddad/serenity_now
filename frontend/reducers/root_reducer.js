@@ -7,11 +7,7 @@
 
 import merge from 'lodash/merge';
 
-const _defaultState = {
-  currentTracks: []
-};
-
-const rootReducer = (state = {}, action) => {
+const rootReducer = (state, action) => {
   Object.freeze(state);
   let nextState = merge({}, state);
 

@@ -7,6 +7,8 @@ class Visual extends React.Component{
     this.state = {
 
     };
+    // analyser held in props
+    console.log(this.props);
   }
 
   render(){
