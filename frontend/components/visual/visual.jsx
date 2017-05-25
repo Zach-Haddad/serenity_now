@@ -7,8 +7,14 @@ class Visual extends React.Component{
     this.state = {
 
     };
+
     // analyser held in props
     console.log(this.props);
+  }
+
+  componentDidMount(){
+    let canvas = this.refs.canvas;
+    let ctx = canvas.getContext('2d');
   }
 
   render(){
