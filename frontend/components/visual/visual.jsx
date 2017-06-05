@@ -8,12 +8,17 @@ class Visual extends React.Component{
     };
 
     // analyser held in props
-    console.log(this.props);
+    this.logAnalyser = this.logAnalyser.bind(this);
   }
 
   componentDidMount(){
     let canvas = this.refs.canvas;
     let ctx = canvas.getContext('2d');
+    // this.logAnalyser(this.props);
+  }
+
+  logAnalyser(props){
+    setInterval(function(){console.log(props.analyser);}, 1000);
   }
 
   render(){

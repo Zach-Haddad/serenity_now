@@ -30,7 +30,6 @@ class SoundBoardItem extends React.Component{
 
   render(){
     // toggle button style on play/pause
-    console.log(this.props);
     return(
       <div className="sound_board_item">
         <button onClick={e => this.playToggle()}>{this.props.name}</button>

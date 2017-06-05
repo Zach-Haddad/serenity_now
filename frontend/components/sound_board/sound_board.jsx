@@ -7,7 +7,6 @@ class SoundBoard extends React.Component{
 
     this.state = {
     };
-    console.log(this.props);
   }
   // include all tracks here; map over and render as sound board items
   // connect all to analyser node by default
@@ -24,8 +23,6 @@ class SoundBoard extends React.Component{
           key={sound.id}
           id={sound.id}
           name={sound.name}
-          analyser={this.props.analyser}
-          audioCtx={this.props.audioCtx}
           />
       )
     );
