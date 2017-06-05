@@ -3,7 +3,6 @@ import React from 'react';
 class Visual extends React.Component{
   constructor(props){
     super(props);
-
     this.state = {
 
     };

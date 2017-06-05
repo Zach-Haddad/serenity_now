@@ -4,9 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root.jsx';
 
 const cloud = 'http://res.cloudinary.com/zach/video/upload/';
-
-
-
 const paths = [
 
 ];
@@ -42,5 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // pass the analyzer and audio + canvas contexts through root to app!
 
-  ReactDOM.render(<Root store={ store } />, root);
+  ReactDOM.render(<Root store={ store } analyser={ analyser }/>, root);
 });

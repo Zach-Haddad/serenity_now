@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import Visual from './visual.jsx';
 
-const mapStateToProps = ({analyser}) => ({
-  analyser: analyser
+const mapStateToProps = () => ({
 });
 
 const mapDispatchToProps = dispatch => ({
