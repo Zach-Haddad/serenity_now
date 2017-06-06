@@ -20,20 +20,34 @@ class Visual extends React.Component{
     let canvas = this.refs.canvas;
     let ctx = canvas.getContext('2d');
     let analyser = this.props.analyser;
+    analyser.fftSize = 32768;
 
     let freqData = new Uint8Array(analyser.frequencyBinCount);
     analyser.getByteFrequencyData(freqData);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#9933ff';
+    console.log(freqData);
 
     // rudimentary bars for now; insert advanced visual logic here
-    let bars = 1000;
-    for (var i = 0; i < bars; i++) {
-      let barXCoord = i * 3;
-      let barWidth = 1;
-      let barHeight = -(freqData[i] / 0.8);
-      ctx.fillRect(barXCoord, canvas.height, barWidth, barHeight);
+
+    // let bars = 1000;
+    // for (var i = 0; i < bars; i++) {
+    //   let barXCoord = i * 3;
+    //   let barWidth = 1;
+    //   let barHeight = -(freqData[i] / 0.7);
+    //   ctx.fillRect(barXCoord, canvas.height, barWidth, barHeight);
+    // }
+
+    // rudimentary circle pattern; think about how we can augment
+    // visual with user input; multiple visual modalities
+
+    let circles = 1000;
+    for (let i = 0; i < circles; i++){
+      ctx.beginPath();
+      ctx.arc(freqData[i]*2, freqData[i]/2, freqData[i/2]*5, 0, 2 * Math.PI);
+      ctx.stroke();
     }
+
     requestAnimationFrame(this.renderVisual.bind(this));
   }
 
