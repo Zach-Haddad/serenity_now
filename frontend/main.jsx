@@ -26,16 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
     audios.appendChild(audio);
   };
 
-  analyser.connect(audioCtx.destination);
-
   // setup all audio files here; implement load screen if streaming not seemless
   // connect all audio files to audiocontext, analyser
   // that way won't need to hold mutable analyser in immutable state!
 
   audio = document.createElement('audio');
+  audio.crossOrigin = "anonymous";
   audio.id = "audio1";
   audio.src = cloud + 'v1495476734/white-noise_h3ti4t.mp3';
   audios.appendChild(audio);
+  const source = audioCtx.createMediaElementSource(audio);
+  source.connect(analyser);
+
+  analyser.connect(audioCtx.destination);
 
   // pass the analyzer and audio + canvas contexts through root to app!
 
