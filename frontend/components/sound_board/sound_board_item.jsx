@@ -13,8 +13,7 @@ class SoundBoardItem extends React.Component{
   }
 
   playToggle(){
-    const target = 'audio' + this.props.id;
-    const audioComponent = document.getElementById(target);
+    const audioComponent = document.getElementById(this.props.name);
 
     this.setState({
       playing: !this.state.playing

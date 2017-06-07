@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root.jsx';
 
-const cloud = 'http://res.cloudinary.com/zach/video/upload/';
-const paths = [
-
-];
+const cloud = 'http://res.cloudinary.com/zach/video/upload/v1495476734/serenity/';
+const paths = ["Birds", "Chimes", "Creek", "Deep Meditation",
+                "Heavy Rain", "Light Rain", "Stream", "Thunderstorm",
+                "Waves", "White Noise", "Wind"];
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
@@ -17,30 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const audioCtx = new AudioContext();
   const analyser = audioCtx.createAnalyser();
 
-  let audio;
-  const addAudio = function(path, idx){
-    audio = document.createElement('audio');
-    audio.id = `audio${idx}`;
-    audio.src = cloud + path;
-    audio.connect(analyser);
+  paths.forEach(function(path){
+    let audio = document.createElement('audio');
+    audio.crossOrigin = "anonymous";
+    audio.id = path;
+    audio.src = cloud + path + '.mp3';
     audios.appendChild(audio);
-  };
-
-  // setup all audio files here; implement load screen if streaming not seemless
-  // connect all audio files to audiocontext, analyser
-  // that way won't need to hold mutable analyser in immutable state!
-
-  audio = document.createElement('audio');
-  audio.crossOrigin = "anonymous";
-  audio.id = "audio1";
-  audio.src = cloud + 'v1495476734/white-noise_h3ti4t.mp3';
-  audios.appendChild(audio);
-  const source = audioCtx.createMediaElementSource(audio);
-  source.connect(analyser);
+    let source = audioCtx.createMediaElementSource(audio);
+    source.connect(analyser);
+  });
 
   analyser.connect(audioCtx.destination);
 
-  // pass the analyzer and audio + canvas contexts through root to app!
-
   ReactDOM.render(<Root store={ store } analyser={ analyser }/>, root);
 });
+
+export default paths;

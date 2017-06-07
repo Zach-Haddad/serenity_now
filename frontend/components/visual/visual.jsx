@@ -44,7 +44,7 @@ class Visual extends React.Component{
     let circles = 1000;
     for (let i = 0; i < circles; i++){
       ctx.beginPath();
-      ctx.arc(freqData[i]*2, freqData[i]/2, freqData[i/2]*5, 0, 2 * Math.PI);
+      ctx.arc(canvas.width/2, canvas.height/2, freqData[i/2]*3, 0, 2 * Math.PI);
       ctx.stroke();
     }
 
