@@ -23,7 +23,7 @@ class SoundBoardItem extends React.Component{
   }
 
   setVolume(e){
-    const audioComponent = document.getElementById('audio1');
+    const audioComponent = document.getElementById(this.props.name);
     audioComponent.volume = e.target.value;
   }
 
