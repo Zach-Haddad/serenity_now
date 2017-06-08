@@ -1,2 +1,23 @@
 /*font-family: 'Comfortaa', cursive;
 font-family: 'Raleway', sans-serif;*/
+#app{
+  display: flex;
+  flex-direction: column;
+}
+
+#content{
+  display: flex;
+  flex-direction: row;
+}
+
+.sound-board{
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.sound-board-item{
+  display: flex;
+  flex-direction: column;
+}

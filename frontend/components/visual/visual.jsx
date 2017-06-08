@@ -60,7 +60,7 @@ class Visual extends React.Component{
   render(){
     console.log(this.props.analyser);
     return(
-      <canvas ref="canvas" width={1000} height={400}/>
+      <canvas ref="canvas" width={800} height={400}/>
     );
   }
 }
