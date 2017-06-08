@@ -6,11 +6,25 @@ import TimerContainer from './timer/timer_container';
 
 const App = ({analyser}) => (
   <div className="app">
-    <h2>Testing</h2>
+    <div id="header">
+      <h2>Serenity Now</h2>
+    </div>
 
-    <VisualContainer analyser={analyser}/>
-    <SoundBoardContainer />
-    <TimerContainer />
+    <div id="content">
+      <div id="left-pane">
+        <VisualContainer analyser={analyser}/>
+      </div>
+
+      <div id="right-pane">
+        <SoundBoardContainer />
+        <TimerContainer />
+      </div>
+    </div>
+
+
+    <div id="footer">
+      
+    </div>
 
   </div>
 );
