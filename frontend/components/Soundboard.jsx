@@ -1,19 +1,16 @@
 import React from 'react';
-import SoundBoardItem from './sound_board_item';
-import paths from '../../main.jsx';
+import SoundboardItem from './SoundboardItem';
+import paths from '../main.jsx';
 
-class SoundBoard extends React.Component{
+class Soundboard extends React.Component{
   constructor(props){
     super(props);
-
-    this.state = {
-    };
   }
 
   render(){
 
     const soundList = paths.map((path, i) => (
-        <SoundBoardItem
+        <SoundboardItem
           key={i}
           name={path}
           />
@@ -28,4 +25,4 @@ class SoundBoard extends React.Component{
   }
 }
 
-export default SoundBoard;
+export default Soundboard;

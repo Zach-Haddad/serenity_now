@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import configureStore from './store/store';
-import Root from './components/root.jsx';
+import App from './components/app';
 
 const cloud = 'http://res.cloudinary.com/zach/video/upload/v1495476734/serenity/';
 const paths = ["Birds", "Chimes", "Creek", "Deep Meditation",
@@ -9,7 +8,7 @@ const paths = ["Birds", "Chimes", "Creek", "Deep Meditation",
                 "Waves", "White Noise", "Wind"];
 
 document.addEventListener('DOMContentLoaded', () => {
-  const store = configureStore();
+  // const store = configureStore();
   const root = document.getElementById('root');
   const audios = document.getElementById('audios');
 
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   analyser.connect(audioCtx.destination);
 
-  ReactDOM.render(<Root store={ store } analyser={ analyser }/>, root);
+  ReactDOM.render(<App analyser={ analyser }/>, root);
 });
 
 export default paths;

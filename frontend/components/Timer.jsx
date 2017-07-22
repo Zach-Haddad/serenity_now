@@ -5,10 +5,8 @@ class Timer extends React.Component{
     super(props);
 
     this.state = {
-      minTen: 0,
-      minOne: 0,
-      secTen: 0,
-      secOne: 0,
+      mins: "00",
+      secs: "00",
       timerStarted: false
     };
 
@@ -16,6 +14,10 @@ class Timer extends React.Component{
   }
 
   startTimer(){
+
+  }
+
+  setUnit(){
 
   }
 
@@ -47,6 +49,7 @@ class Timer extends React.Component{
   }
 
   render(){
+
     return(
       // use css to have timer input fields be within circular canvas clock
       <div className="timerContainer">
@@ -54,10 +57,9 @@ class Timer extends React.Component{
         </div>
 
         <div className="timerInput">
-          <input type="number" min="0" max="9" value={this.state.minTen}></input>
-          <input type="number" min="0" max="9" value={this.state.minOne}></input>
-          <input type="number" min="0" max="5" value={this.state.secTen}></input>
-          <input type="number" min="0" max="9" value={this.state.secOne}></input>
+          <input type="number" min="0" max="99" value={this.state.mins}></input>
+          :
+          <input type="number" min="0" max="59" value={this.state.secs}></input>
           <button onClick={this.restartTimer}/>
         </div>
       </div>

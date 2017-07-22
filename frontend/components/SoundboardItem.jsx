@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SoundBoardItem extends React.Component{
+class SoundboardItem extends React.Component{
   constructor(props){
     super(props);
 
@@ -45,4 +45,4 @@ class SoundBoardItem extends React.Component{
 }
 
 
-export default SoundBoardItem;
+export default SoundboardItem;
