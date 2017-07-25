@@ -7,12 +7,10 @@ class Visual extends React.Component{
 
     };
 
-    // analyser held in props
     this.logAnalyser = this.logAnalyser.bind(this);
   }
 
   componentDidMount(){
-    console.log(this.props.analyser);
     this.renderVisual();
   }
 
@@ -26,7 +24,6 @@ class Visual extends React.Component{
     analyser.getByteFrequencyData(freqData);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#9933ff';
-    console.log(freqData);
 
     // rudimentary bars for now; insert advanced visual logic here
 

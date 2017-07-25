@@ -13,7 +13,6 @@ class App extends React.Component{
   }
 
   render(){
-    console.log("im here");
     return(
       <div className="app">
         <div id="header">

@@ -21,3 +21,11 @@ font-family: 'Raleway', sans-serif;*/
   display: flex;
   flex-direction: column;
 }
+
+.buttonPlaying{
+  background: rgba(30, 30, 30, 0.5);
+}
+
+.buttonPaused{
+
+}

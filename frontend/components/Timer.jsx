@@ -51,7 +51,6 @@ class Timer extends React.Component{
   render(){
 
     return(
-      // use css to have timer input fields be within circular canvas clock
       <div className="timerContainer">
         <div className="timerCanvas">
         </div>
