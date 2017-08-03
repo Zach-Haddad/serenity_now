@@ -8,11 +8,9 @@ const paths = ["Birds", "Chimes", "Creek", "Deep Meditation",
                 "Waves", "White Noise", "Wind"];
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const store = configureStore();
   const root = document.getElementById('root');
   const audios = document.getElementById('audios');
 
-  // setup audio ctx and analyser node
   const audioCtx = new AudioContext();
   const analyser = audioCtx.createAnalyser();
 

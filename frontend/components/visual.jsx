@@ -7,7 +7,7 @@ class Visual extends React.Component{
 
     };
 
-    this.logAnalyser = this.logAnalyser.bind(this);
+    // this.logAnalyser = this.logAnalyser.bind(this);
   }
 
   componentDidMount(){
@@ -25,7 +25,7 @@ class Visual extends React.Component{
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#9933ff';
 
-    // rudimentary bars for now; insert advanced visual logic here
+    // rudimentary bars
 
     // let bars = 1000;
     // for (var i = 0; i < bars; i++) {
@@ -35,8 +35,7 @@ class Visual extends React.Component{
     //   ctx.fillRect(barXCoord, canvas.height, barWidth, barHeight);
     // }
 
-    // rudimentary circle pattern; think about how we can augment
-    // visual with user input; multiple visual modalities
+    // rudimentary circle pattern;
 
     let circles = 1000;
     for (let i = 0; i < circles; i++){
@@ -47,8 +46,6 @@ class Visual extends React.Component{
 
     requestAnimationFrame(this.renderVisual.bind(this));
   }
-
-
 
   logAnalyser(props){
     setInterval(function(){console.log(props.analyser);}, 1000);
