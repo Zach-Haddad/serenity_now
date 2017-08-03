@@ -3,6 +3,7 @@ import React from 'react';
 import Visual from './Visual';
 import Soundboard from './Soundboard';
 import Timer from './Timer';
+import Footer from './Footer';
 
 class App extends React.Component{
   constructor(props){
@@ -34,6 +35,8 @@ class App extends React.Component{
         <div id="footer">
 
         </div>
+
+        <Footer />
 
       </div>
     );

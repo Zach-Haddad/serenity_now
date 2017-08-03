@@ -26,18 +26,22 @@ font-family: 'Raleway', sans-serif;*/
 .sound-board-item button{
   padding: 8px;
   outline: none;
+  opacity: 0.85;
 }
 
 .sound-board-item button:hover{
   font-weight: bold;
+  opacity: 1;
 }
 
 .buttonPlaying{
   background: #444;
+  color: white;
 }
 
 .buttonPaused{
-  background: #CCC
+  background: #CCC;
+  color: black;
 }
 
 input[type=range] {
