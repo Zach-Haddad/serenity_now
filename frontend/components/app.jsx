@@ -31,11 +31,6 @@ class App extends React.Component{
           </div>
         </div>
 
-
-        <div id="footer">
-
-        </div>
-
         <Footer />
 
       </div>
