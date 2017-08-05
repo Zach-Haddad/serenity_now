@@ -10,6 +10,14 @@ font-family: 'Raleway', sans-serif;*/
   flex-direction: row;
 }
 
+#title, #credit{
+  font-family: 'Comfortaa', cursive;
+}
+
+#header{
+  text-align: center;
+}
+
 .sound-board{
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +35,7 @@ font-family: 'Raleway', sans-serif;*/
   padding: 8px;
   outline: none;
   opacity: 0.85;
+  font-family: 'Raleway', sans-serif;
 }
 
 .sound-board-item button:hover{
@@ -154,4 +163,10 @@ input[type=range]:focus::-ms-fill-upper {
 .footer img {
   height: 50px;
   width: 50px;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+.footer img:hover{
+  opacity: 1;
 }

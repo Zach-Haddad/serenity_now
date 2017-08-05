@@ -5,7 +5,7 @@ const Footer = () => {
 
   return(
     <div className="footer">
-      <h2>Created by Zach Haddad</h2>
+      <h2 id="credit">Created by Zach Haddad</h2>
 
       <div className="links">
         <a href="https://github.com/Zach-Haddad" target="_blank">

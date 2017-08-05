@@ -17,7 +17,7 @@ class App extends React.Component{
     return(
       <div className="app">
         <div id="header">
-          <h2>Serenity Now</h2>
+          <h2 id="title">Serenity Now</h2>
         </div>
 
         <div id="content">
