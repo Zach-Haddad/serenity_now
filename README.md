@@ -3,7 +3,7 @@
 Incoming
 
 ### Technologies
-- [ ] React + Redux
+- [ ] React
 - [ ] Web Audio API
 - [ ] HTML 5 Canvas
 - [ ] Webpack
