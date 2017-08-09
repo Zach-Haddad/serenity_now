@@ -9,6 +9,7 @@ Incoming
 - [ ] Webpack
 
 ### Setup
-1. Run npm install
-2. Run webpack
-3. Open index.html
+1. ``git clone https://github.com/Zach-Haddad/serenity_now.git``
+2. ``npm install``
+3. ``webpack -w``
+4. ``open index.html``
