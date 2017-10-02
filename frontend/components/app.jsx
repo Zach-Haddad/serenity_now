@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Visual from './Visual';
+import Visual from './visual';
 import Soundboard from './Soundboard';
 import Timer from './Timer';
 import Footer from './Footer';
