@@ -25,7 +25,6 @@ module.exports = {
   },
   devtool: 'source-map',
   node: {
-     console: 'empty',
      fs: 'empty',
      net: 'empty',
      tls: 'empty'
