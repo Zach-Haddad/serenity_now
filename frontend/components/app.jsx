@@ -4,6 +4,8 @@ import Visual from './Visual';
 import Soundboard from './Soundboard';
 import Timer from './Timer';
 import Footer from './Footer';
+import express from 'express';
+const app = express();
 
 class App extends React.Component{
   constructor(props){
@@ -11,6 +13,10 @@ class App extends React.Component{
     this.state = {
 
     };
+  }
+
+  componentDidMount(){
+    console.log(app);
   }
 
   render(){

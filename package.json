@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-     "prod": "NODE_ENV=production node server.js",
-     "postinstall": "webpack -p",
-     "webpack": "webpack -w"
-   },
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
+    "webpack": "webpack -w"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,5 +22,8 @@
     "react-addons-css-transition-group": "^0.14.6",
     "react-dom": "^0.14.2",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7"
   }
 }
