@@ -4,8 +4,9 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/main.jsx",
   output: {
-    path: path.join(__dirname, 'frontend'),
-    filename: "bundle.js"
+    path: __dirname,
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
